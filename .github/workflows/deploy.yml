@@ -1,0 +1,14 @@
+name: Api deploy
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  build:
+    if: ${{ github.ref == 'refs/heads/master' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Current tag
+        run: echo `${{ github.ref_name }}`
