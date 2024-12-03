@@ -1,0 +1,22 @@
+openapi: "3.1.0"
+info:
+  title: Fri app
+  version: "14.0.0"
+  description: |
+    The following are the service for `fri mobile apps (Android, iOS, Huawei)
+    
+    ## Important 
+    > 1. **Encryption**: The services requests and responses are encrypted using CIPHER with the `aes-gcm-256` method.
+    > 2. **HTTP Methods**: the allowed verbs are:
+    >    - POST
+    >    - PUT
+    >    - PATCH
+    >    - DELETE
+    > 3. **Services**: Are programming with [REST-JSON](https://jsonapi.org)
+tags:
+  - name: Authentication
+    description: |
+      Contains all the services related to the authentication in the app, this service not required a `sessionID` value
+servers:
+  - url: "https://dev.soyfri.com"
+  - url: "localhost:9000"
